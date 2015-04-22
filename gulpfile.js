@@ -11,7 +11,7 @@ var cucumber = require('gulp-cucumber');
 
 // 'built' task to start server 
 gulp.task('built', function () {
-    server.run(['app.js', 'app/routes/**/*.js']);
+    server.run(['app/app.js', 'app/routes/**/*.js']);
 });
 
 //'lint' task to lint all JS
