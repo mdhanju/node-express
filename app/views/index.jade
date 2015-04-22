@@ -1,0 +1,53 @@
+extends layout.jade
+
+block head
+    title Home
+    link(rel='stylesheet', href='node_modules/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='node_modules/bootstrap/dist/css/bootstrap-theme.min.css')
+    link(rel='stylesheet', href='app/styles/main.css')
+block body
+        .container
+            .navbar.navbar-default
+                .container-fluid
+                    .navbar-header
+                        a.navbar-brand PROJECT
+                    .navbar-collapse.collapse
+                        ul.nav.navbar-nav
+                            li
+                                a.active(href="#") HOME
+                            li
+                                a(href="#") ABOUT
+                            li.dropdown 
+                                a.dropdown-toggle(data-toggle="dropdown", href="#") CONTACT
+                                    .caret
+                                ul.dropdown-menu
+                                    li
+                                        a(href="#") BY EMAIL
+                                    li
+                                        a(href="#") BY PHONE
+                        ul.nav.navbar-nav.navbar-right
+                            li
+                                a(href="#") PAY BILL
+                            li
+                                a(href="#") SEARCH
+
+
+
+    
+            .jumbotron
+                .container
+                    form(action='/signIn',method='post')
+                        .form-group
+                            //label(for="exampleInputEmail1") Email
+                            input.form-control(type="email", id="exampleInputEmail1", placeholder="Email", name="Email") 
+                        .form-group
+                            //label(for="exampleInputPassword1") Password
+                            input.form-control(type="password", id="exampleInputPassword1", placeholder="Password", name="Password")
+                        .form-group
+                            input(type='checkbox')
+                            label(type="checkbox") Remember Me
+                        
+                        button.btn.btn-lg.btn-primary(type="submit") Submit
+
+                        script(src='node_modules/jquery/dist/jquery.min.js')
+                        script(src='node_modules/bootstrap/dist/js/bootstrap.min.js')
