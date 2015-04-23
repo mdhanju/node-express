@@ -4,12 +4,41 @@
 
 var request = require('request');
 
-exports.index = function (req, res) {
-    res.render('index', {
+exports.home = function (req, res) {
+    res.render('home', {
         title: 'Express'
     });
 };
 
+exports.employees = function (req, res) {
+    res.render('employees', {
+        title: 'Express'
+    });
+};
+
+exports.services = function (req, res) {
+    res.render('services', {
+        title: 'Express'
+    });
+};
+
+exports.contact = function (req, res) {
+    res.render('contact', {
+        title: 'Express'
+    });
+};
+
+exports.career = function (req, res) {
+    res.render('career', {
+        title: 'Express'
+    });
+};
+
+exports.mission = function (req, res) {
+    res.render('mission', {
+        title: 'Express'
+    });
+};
 
 exports.signIn = function (req, res) {
     res.render('signIn', req.body);

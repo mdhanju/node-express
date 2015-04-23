@@ -17,10 +17,6 @@ app.set('view engine', 'jade');
 
 //app.use(router);
 app.use(express.static(path.join(__dirname, '../')));
-// app.use(express.static(path.join(__dirname, '/')));
-
-//app.use(express.bodyParser());
-//app.use(express.methodOverride());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
@@ -30,29 +26,17 @@ app.all('/', function (req, res, next) {
     console.log('Accessing the secret section ...');
     next(); // pass control to the next handler
 });
-app.get('/', routes.index);
+app.get('/', routes.home);
+app.get('/services', routes.services);
+app.get('/employees', routes.employees);
+app.get('/contact', routes.contact);
+app.get('/career', routes.career);
+app.get('/mission', routes.mission);
+
 app.get('/users', user.list);
 app.post('/signIn', routes.signIn);
 
 app.get('/searching', routes.searching);
-//app.get('/searching', function (req, res) {
-//    //    res.send("WHEEE");
-//    var val = req.query.search;
-//    console.log(val);
-//    var url = "http://api.openweathermap.org/data/2.5/weather?q=" + val;
-//    console.log(url);
-//    request(url, function (err, resp, body) {
-//        body = JSON.parse(body);
-//
-//        if (err) {
-//            console.log(err);
-//        } else {
-//            console.log(body);
-//        }
-//
-//    });
-//});
-
 http.createServer(app).listen(app.get('port'), app.get('port'), function () {
     console.log('Server  started  http://' + app.get('host') + ":" + app.get('port'));
 });

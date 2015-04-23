@@ -1,0 +1,21 @@
+extends layout.jade
+block header
+    .row 
+        .col-sm-6
+            h1 Map 
+            h2 Address
+        .col-sm-6
+            .jumbotron
+                form.form-group(action='',method='post')
+                    h2.form-signin-heading Contact Us
+                    input.form-control(type="fname", placeholder="First Name", autofocus="autofocus")
+                    br
+                    input.form-control(type="lname", placeholder="Last Name")
+                    br
+                    input.form-control(type="email", placeholder="Email address")
+                    br
+                    textarea.form-control.input-md(type="comments", placeholder="Type Comments")
+                    br
+                    button.btn.btn-lg.btn-primary.btn-block(type="submit") Submit
+                    script(src='node_modules/jquery/dist/jquery.min.js')
+                    script(src='node_modules/bootstrap/dist/js/bootstrap.min.js')

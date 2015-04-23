@@ -24,3 +24,11 @@ body {
 .dropdown:hover .dropdown-menu {
     display: block;
 }
+
+.img-responsive2 {
+    display: block;
+    max-width: 80px;
+    max-height: 50px;
+    margin: -5px 0px 0px 0px;
+    /*    border-radius: 5px;*/
+}

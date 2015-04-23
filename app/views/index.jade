@@ -1,40 +1,6 @@
 extends layout.jade
-
-block head
-    title Home
-    link(rel='stylesheet', href='node_modules/bootstrap/dist/css/bootstrap.min.css')
-    link(rel='stylesheet', href='node_modules/bootstrap/dist/css/bootstrap-theme.min.css')
-    link(rel='stylesheet', href='app/styles/main.css')
-block body
-        .container
-            .navbar.navbar-default
-                .container-fluid
-                    .navbar-header
-                        a.navbar-brand PROJECT
-                    .navbar-collapse.collapse
-                        ul.nav.navbar-nav
-                            li
-                                a.active(href="#") HOME
-                            li
-                                a(href="#") ABOUT
-                            li.dropdown 
-                                a.dropdown-toggle(data-toggle="dropdown", href="#") CONTACT
-                                    .caret
-                                ul.dropdown-menu
-                                    li
-                                        a(href="#") Email
-                                    li
-                                        a(href="#") Phone
-                        ul.nav.navbar-nav.navbar-right
-                            li
-                                a(href="#") PAY BILL
-                            li
-                                a(href="#") SEARCH
-
-
-
-    
-            .jumbotron
+block header
+    .jumbotron
                 .container
                     form.form-signin(action='/signIn',method='post')
                         h2.form-signin-heading Sign In
@@ -45,3 +11,5 @@ block body
                         button.btn.btn-lg.btn-primary.btn-block(type="submit") Sign in
                         script(src='node_modules/jquery/dist/jquery.min.js')
                         script(src='node_modules/bootstrap/dist/js/bootstrap.min.js')
+                        
+    
