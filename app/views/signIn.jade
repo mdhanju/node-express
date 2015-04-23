@@ -7,4 +7,9 @@ block head
     link(rel='stylesheet', href='app/styles/main.css')
 block body
         .container
-            p Hello
+            .jumbotron
+                input.form-control#search(type="search", placeholder="City")
+                h2#results
+                h2#weather
+                script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+                script(src="app/js/main.js")

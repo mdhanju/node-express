@@ -14,6 +14,7 @@ app.set('host', process.env.host || 'localhost');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+
 //app.use(router);
 app.use(express.static(path.join(__dirname, '../')));
 // app.use(express.static(path.join(__dirname, '/')));
@@ -32,6 +33,25 @@ app.all('/', function (req, res, next) {
 app.get('/', routes.index);
 app.get('/users', user.list);
 app.post('/signIn', routes.signIn);
+
+app.get('/searching', routes.searching);
+//app.get('/searching', function (req, res) {
+//    //    res.send("WHEEE");
+//    var val = req.query.search;
+//    console.log(val);
+//    var url = "http://api.openweathermap.org/data/2.5/weather?q=" + val;
+//    console.log(url);
+//    request(url, function (err, resp, body) {
+//        body = JSON.parse(body);
+//
+//        if (err) {
+//            console.log(err);
+//        } else {
+//            console.log(body);
+//        }
+//
+//    });
+//});
 
 http.createServer(app).listen(app.get('port'), app.get('port'), function () {
     console.log('Server  started  http://' + app.get('host') + ":" + app.get('port'));
