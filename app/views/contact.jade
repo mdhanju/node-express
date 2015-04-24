@@ -2,8 +2,12 @@ extends layout.jade
 block header
     .row 
         .col-sm-6
-            h1 Map 
-            h2 Address
+            .google-map-canva#map-canvas Google Maps 
+            .container
+                h3 Company Corp.
+                iframe(width="425", height="350", src="https://maps.google.com/maps?hl=en&amp;source=embed&amp;ie=UTF8&amp;ll=34.18201,-118.325211&amp;spn=0.322072,0.676346&amp;t=v&amp;z=11&amp")
+                h5 123 First street 
+                h5 San Francisco, CA-94105
         .col-sm-6
             .jumbotron
                 form.form-group(action='',method='post')
@@ -19,3 +23,4 @@ block header
                     button.btn.btn-lg.btn-primary.btn-block(type="submit") Submit
                     script(src='node_modules/jquery/dist/jquery.min.js')
                     script(src='node_modules/bootstrap/dist/js/bootstrap.min.js')
+                    script(src='app/js/contactMap.js')
