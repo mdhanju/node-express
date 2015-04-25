@@ -6,13 +6,19 @@ html
     link(rel='stylesheet', href='node_modules/bootstrap/dist/css/bootstrap-theme.min.css')
     link(rel='stylesheet', href='app/styles/main.css')
 block body
+        script(type='text/javascript')
         .container
             .navbar.navbar-default
                 .container-fluid
                     .navbar-header
                         a.navbar-brand(href="/")
                             img.img-responsive2(src="/app/images/logos/home-ico.png")
-                    .navbar-collapse.collapse
+                        .navbar-toggle.collapsed(data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar")
+                            span.sr-only Toggle navigation
+                            span.icon-bar
+                            span.icon-bar
+                            span.icon-bar
+                    .collapse.navbar-collapse#navbar
                         ul.nav.navbar-nav
                             li
                                 a.active(href="mission") Our Mission

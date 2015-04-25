@@ -4,10 +4,10 @@ block header
         .container
             form.form-signin(action='/signIn',method='post')
                 h2.form-signin-heading Sign In
-                input.form-control(type="email", placeholder="Email address", autofocus="autofocus")
-                input.form-control(type="password", placeholder="password")
+                input.form-control#Email(type="email", placeholder="Email address", autofocus="autofocus")
+                input.form-control#Passwd(type="password", placeholder="password")
                 input(type="checkbox")
                 label.checkbox Remember me
-                button.btn.btn-lg.btn-primary.btn-block(type="submit") Sign in
+                button.btn.btn-lg.btn-primary.btn-block#signIn(type="submit") Sign in
                 script(src='node_modules/jquery/dist/jquery.min.js')
                 script(src='node_modules/bootstrap/dist/js/bootstrap.min.js')

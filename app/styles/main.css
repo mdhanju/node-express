@@ -1,6 +1,16 @@
 body {
     padding-top: 20px;
     padding-bottom: 20px;
+    background-image: url("/app/images/images/image1.jpg");
+    background-repeat: no-repeat;
+    background-origin: inherit;
+    background-size: 100%;
+    background-repeat: repeat-y;
+}
+
+.container-fluid,
+.jumbotron {
+    background-color: aliceblue;
 }
 
 .jumbotron {
@@ -41,4 +51,9 @@ body {
 
 .map {
     height: 100%
+}
+
+.mapBox {
+    min-height: 400px;
+    min-width: 450px;
 }

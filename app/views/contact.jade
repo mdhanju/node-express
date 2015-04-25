@@ -2,10 +2,8 @@ extends layout.jade
 block header
     .row 
         .col-sm-6
-            .google-map-canva#map-canvas Google Maps 
             .container
-                h3 Company Corp.
-                iframe(width="425", height="350", src="https://maps.google.com/maps?hl=en&amp;source=embed&amp;ie=UTF8&amp;ll=34.18201,-118.325211&amp;spn=0.322072,0.676346&amp;t=v&amp;z=11&amp")
+                iframe.mapBox(frameborder="0", style="border:0", src="https://www.google.com/maps/embed/v1/place?q=San%20Francisco%2C%20CA%2C%20United%20States&key=AIzaSyDyZP3z-w4mcgFKmnShUrRVGYHiO6vZ7Oc")
                 h5 123 First street 
                 h5 San Francisco, CA-94105
         .col-sm-6

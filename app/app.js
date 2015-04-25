@@ -9,7 +9,7 @@ var router = express.Router();
 
 
 //all environments 
-app.set('port', process.env.port || 3000);
+app.set('port', process.env.port || 3030);
 app.set('host', process.env.host || 'localhost');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
