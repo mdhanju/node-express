@@ -21,13 +21,6 @@ gulp.task('lint', function () {
         .pipe(jshint.reporter('default'));
 });
 
-// Compile Our Sass
-gulp.task('sass', function () {
-    return gulp.src('scss/*.scss')
-        .pipe(sass())
-        .pipe(gulp.dest('dist/assets/css/'));
-});
-
 gulp.task('css', function () {
     return gulp.src('app/styles/*.css')
         .pipe(gulp.dest('dist/assets/css/'));
@@ -51,7 +44,6 @@ gulp.task('clean', function (callback) {
 // Watch all js, css and sass files for ant changes
 gulp.task('watch', function () {
     gulp.watch(['app/**/*.js', '*.js'], ['lint', 'scripts', 'built']);
-    gulp.watch('scss/*.scss', ['sass']);
     gulp.watch('app/styles/*.css', ['css']);
 });
 
@@ -71,5 +63,5 @@ gulp.task('e2e-watch', function () {
 
 //Default task 
 gulp.task('default', ['clean'], function () {
-    gulp.start('lint', 'sass', 'css', 'scripts', 'watch', 'built');
+    gulp.start('lint', 'css', 'scripts', 'watch', 'built');
 });

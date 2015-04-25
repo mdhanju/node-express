@@ -1,0 +1,146 @@
+body {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-image: url("../images/images/image1.jpg");
+    background-repeat: no-repeat;
+    background-origin: inherit;
+    background-size: 100%;
+    background-repeat: repeat-y;
+}
+
+.containerLogos {
+    max-height: 15px;
+}
+
+.trans {
+    background-color: tan;
+}
+
+.container-fluid,
+.jumbotron {
+    background-color: aliceblue;
+}
+
+.jumbotron {
+    width: 100%;
+    float: center;
+    margin: auto;
+}
+
+#search {
+    /*    text-align: center;*/
+    
+    width: 80%;
+    /*    height: 50%;*/
+    
+    font-size: auto;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.img-responsive2 {
+    display: block;
+    max-width: 80px;
+    max-height: 50px;
+    margin: -5px 0px 0px 0px;
+    /*    border-radius: 5px;*/
+}
+
+.map {
+    height: 100%;
+    width: 100%
+}
+
+.social-icons a {
+    background: url(../images/logos/social-icons.png) no-repeat;
+}
+
+.social-icons a.facebook {
+    background-position: left top;
+}
+
+.social-icons a.facebook:hover {
+    background-position: left -30px;
+}
+
+.social-icons a.twitter {
+    background-position: -30px top;
+}
+
+.social-icons a.twitter:hover {
+    background-position: -30px -30px;
+}
+
+.social-icons a.youtube {
+    background-position: -60px top;
+}
+
+.social-icons a.youtube:hover {
+    background-position: -60px -30px;
+}
+
+.social-icons a.flickr {
+    background-position: -90px top;
+}
+
+.social-icons a.flickr:hover {
+    background-position: -90px -30px;
+}
+
+.social-icons a.google {
+    background-position: -120px top;
+}
+
+.social-icons a.google:hover {
+    background-position: -120px -30px;
+}
+
+.social-icons a.yahoo {
+    background-position: -150px top;
+}
+
+.social-icons a.yahoo:hover {
+    background-position: -150px -30px;
+}
+
+.social-icons a.linkedin {
+    background-position: -180px top;
+}
+
+.social-icons a.linkedin:hover {
+    background-position: -180px -30px;
+}
+
+.facebook {
+    float: left;
+    margin-left: 5px;
+    width: 55px;
+    overflow: hidden
+}
+
+.twitter {
+    float: left
+}
+
+.social-icons {
+    float: left;
+    margin: 5px 15px 15px 0px;
+    padding: 0px;
+}
+
+.social-icons a {
+    float: left;
+    margin: 0px 5px;
+    padding: 0px;
+    width: 30px;
+    height: 30px;
+    -webkit-transition: all .5s;
+}
+
+.col-sm-6-custom{
+    min-height: 456px;
+}

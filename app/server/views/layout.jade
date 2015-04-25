@@ -4,15 +4,26 @@ html
     title Home
     link(rel='stylesheet', href='node_modules/bootstrap/dist/css/bootstrap.min.css')
     link(rel='stylesheet', href='node_modules/bootstrap/dist/css/bootstrap-theme.min.css')
-    link(rel='stylesheet', href='app/styles/main.css')
+    link(rel='stylesheet', href='app/public/styles/main.css')
 block body
         script(type='text/javascript')
+        script(src='app/public/js/main.js')
+        .container
+            ul.nav.navbar-right
+                li.containerLogos
+                    .social-icons
+                        a.facebook(href="https://www.facebook.com/")
+                        a.twitter(href="#")
+                        a.youtube(href="#")
+                        a.flickr(href="#")
+                        a.google(href="#")
+                        a.yahoo(href="#")
         .container
             .navbar.navbar-default
                 .container-fluid
                     .navbar-header
                         a.navbar-brand(href="/")
-                            img.img-responsive2(src="/app/images/logos/home-ico.png")
+                            img.img-responsive2(src="/app/public/images/logos/home-ico.png")
                         .navbar-toggle.collapsed(data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar")
                             span.sr-only Toggle navigation
                             span.icon-bar

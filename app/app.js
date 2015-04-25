@@ -1,6 +1,6 @@
 var express = require('express');
-var routes = require('./routes');
-var user = require('./routes/user');
+var routes = require('./server/routes');
+var user = require('./server/routes/user');
 var http = require('http');
 var path = require('path');
 var bodyParser = require('body-parser');
@@ -9,9 +9,9 @@ var router = express.Router();
 
 
 //all environments 
-app.set('port', process.env.port || 3030);
+app.set('port', process.env.port || 3000);
 app.set('host', process.env.host || 'localhost');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'server/views'));
 app.set('view engine', 'jade');
 
 

@@ -1,14 +1,16 @@
 extends layout.jade
 block header
     .row 
-        .col-sm-6
-            .container
-                iframe.mapBox(frameborder="0", style="border:0", src="https://www.google.com/maps/embed/v1/place?q=San%20Francisco%2C%20CA%2C%20United%20States&key=AIzaSyDyZP3z-w4mcgFKmnShUrRVGYHiO6vZ7Oc")
+        .col-sm-6.col-sm-6-custom 
+            .jumbotron
+                iframe.mapBox.map(frameborder="0", style="border:0", src="https://www.google.com/maps/embed/v1/place?q=San%20Francisco%2C%20CA%2C%20United%20States&key=AIzaSyDyZP3z-w4mcgFKmnShUrRVGYHiO6vZ7Oc")
+            .jumbotron
+                h3 Company Inc.
                 h5 123 First street 
                 h5 San Francisco, CA-94105
         .col-sm-6
             .jumbotron
-                form.form-group(action='',method='post')
+                form.form-group(action='/contact',method='get')
                     h2.form-signin-heading Contact Us
                     input.form-control(type="fname", placeholder="First Name", autofocus="autofocus")
                     br
@@ -21,4 +23,4 @@ block header
                     button.btn.btn-lg.btn-primary.btn-block(type="submit") Submit
                     script(src='node_modules/jquery/dist/jquery.min.js')
                     script(src='node_modules/bootstrap/dist/js/bootstrap.min.js')
-                    script(src='app/js/contactMap.js')
+                    script(src='app/public/js/contactMap.js')
